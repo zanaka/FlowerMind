@@ -1,0 +1,32 @@
+<%= form_with(model: bouquet, local: true) do |form| %>
+  <% if bouquet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bouquet.errors.count, "error") %> prohibited this bouquet from being saved:</h2>
+
+      <ul>
+      <% bouquet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :word1 %>
+    <%= form.text_field :word1, id: :bouquet_word1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :word2 %>
+    <%= form.text_field :word2, id: :bouquet_word2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :word3 %>
+    <%= form.text_field :word3, id: :bouquet_word3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

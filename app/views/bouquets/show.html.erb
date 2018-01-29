@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Word1:</strong>
+  <%= @bouquet.word1 %>
+</p>
+
+<p>
+  <strong>Word2:</strong>
+  <%= @bouquet.word2 %>
+</p>
+
+<p>
+  <strong>Word3:</strong>
+  <%= @bouquet.word3 %>
+</p>
+
+<%= link_to 'Edit', edit_bouquet_path(@bouquet) %> |
+<%= link_to 'Back', bouquets_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bouquets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word1</th>
+      <th>Word2</th>
+      <th>Word3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bouquets.each do |bouquet| %>
+      <tr>
+        <td><%= bouquet.word1 %></td>
+        <td><%= bouquet.word2 %></td>
+        <td><%= bouquet.word3 %></td>
+        <td><%= link_to 'Show', bouquet %></td>
+        <td><%= link_to 'Edit', edit_bouquet_path(bouquet) %></td>
+        <td><%= link_to 'Destroy', bouquet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bouquet', new_bouquet_path %>
