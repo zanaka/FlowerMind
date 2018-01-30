@@ -2,15 +2,11 @@
   --jumbotron-padding-y: 3rem;
 }
 
-.bg-dark {
-  background-color: #fff8dc;
-}
-
 .jumbotron {
   padding-top: var(--jumbotron-padding-y);
   padding-bottom: var(--jumbotron-padding-y);
   margin-bottom: 0;
-  background-color: #fff8dc;
+  background-color: #fff;
 }
 @media (min-width: 768px) {
   .jumbotron {
