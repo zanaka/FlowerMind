@@ -28,7 +28,7 @@ class BouquetsController < ApplicationController
 
     respond_to do |format|
       if @bouquet.save
-        format.html { redirect_to @bouquet, notice: 'Bouquet was successfully created.' }
+        format.html { redirect_to @bouquet, notice: '花束が作られました' }
         format.json { render :show, status: :created, location: @bouquet }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class BouquetsController < ApplicationController
   def update
     respond_to do |format|
       if @bouquet.update(bouquet_params)
-        format.html { redirect_to @bouquet, notice: 'Bouquet was successfully updated.' }
+        format.html { redirect_to @bouquet, notice: '花束が新しく作成されました' }
         format.json { render :show, status: :ok, location: @bouquet }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class BouquetsController < ApplicationController
   def destroy
     @bouquet.destroy
     respond_to do |format|
-      format.html { redirect_to bouquets_url, notice: 'Bouquet was successfully destroyed.' }
+      format.html { redirect_to bouquets_url, notice: '花束は削除されました' }
       format.json { head :no_content }
     end
   end
