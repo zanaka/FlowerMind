@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :bouquets
   get '/' => 'home#top'
+
+  resources :bouquets
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
