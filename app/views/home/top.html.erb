@@ -16,6 +16,8 @@
 
     <!-- Custom styles for this template -->
     <%= stylesheet_link_tag "album.css", :media => "all" %>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+
   </head>
 
   <body>
@@ -53,23 +55,42 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
+      <div class="jumbotron text-center">
+        <%= javascript_include_tag "slideshow.js" %>
+
+        <div id="slideshow">
+         <img src="churipu.jpg" alt="画像1" class="active">
+         <img src="lose.jpg" alt="画像2">
+         <img src="himawari.jpg" alt="画像3">
+        </div>
+
         <div class="container">
+
+
           <h1 class="jumbotron-heading">Flower Mind</h1>
           <p class="lead text-muted">あなたの想い，<br>花にかえて伝えてみませんか。</p>
         </div>
-      </section>
+      </div>
 
       <div class="album py-5 bg-light">
         <div class="container">
 
-          <nav>
-            <ul class="main-nav">
-              <li><a href="#">Step 1</a></li>
-              <li><a href="#">Step 2</a></li>
-              <li><a href="#">Step 3</a></li>
-            </ul>
-          </nav>
+
+            <nav>
+              <ul class="main-nav">
+                <li>Step 1
+                  <p>贈りたい言葉から花束を作成</p>
+                </li>
+                <li>Step 2
+                  <p>作成した花束を花屋で購入</p>
+                </li>
+                <li>Step 3
+                  <p>「いつ，誰に，どんな花束を」</p>
+                  <p>flowerメモリの記録</p>
+                </li>
+              </ul>
+            </nav>
+
 
           <div class="row">
             <div class="col-md-4">
