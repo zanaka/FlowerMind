@@ -32,10 +32,21 @@
             </div>
             <div class="col-sm-4 offset-md-1 py-4">
               <h4 class="text-white">Contact</h4>
-              <ul class="list-unstyled">
+              <%= javascript_include_tag "toolchip.js" %>
+              <ul class="tooltip">
+                <li>
+                  <a href="https://twitter.com/The_Na_Ka?lang=ja" class="text-white">Follow on Twitter</a>
+                  <span>私のtwitterに飛びます。</span>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/rika.nakaza" class="text-white">Like on Facebook</a>
+                  <span>Facebookアカウントをお持ちの方はぜひ「いいね！」</span>
+                </li>
+              </ul>
+              <!-- <ul class="list-unstyled">
                 <li><a href="https://twitter.com/The_Na_Ka?lang=ja" class="text-white">Follow on Twitter</a></li>
                 <li><a href="https://www.facebook.com/rika.nakaza" class="text-white">Like on Facebook</a></li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
@@ -50,6 +61,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
+        <%= javascript_include_tag "focus.js" %>
+        <input type="text" class="focus" value="キーワードを入力">
       </div>
     </header>
 
@@ -70,6 +83,12 @@
           <h1 class="jumbotron-heading">Flower Mind</h1>
           <p class="lead text-muted">あなたの想い，<br>花にかえて伝えてみませんか。</p>
         </div>
+      </div>
+      <%= javascript_include_tag "slidepanel.js" %>
+      <p class="open">FlowerMindとは</p>
+      <div id="slideBox">
+        FlowerMindとは，花言葉から花束を自動で作ってくれるwebアプリケーションです。
+        普段は言えない言葉から花を作って相手に伝えて見ませんか。
       </div>
 
       <div class="album py-5 bg-light">
@@ -136,7 +155,14 @@
               </div>
             </div>
           </div>
+          <a href="#">
+            <%= javascript_include_tag "test.js" %>
+            <img src="http://webcreatorbox.com/sample/images/btn_sample_off.jpg" alt="btn_sample_off" width="196" height="47" />
+          </a>
+          
           <a href="#" class="make-bouquet">もっと見る</a>
+          <p>ページトップ</p>
+          <p class="toTop">ページトップへ</p>
         </div>
       </div>
 
