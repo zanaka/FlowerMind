@@ -11,9 +11,10 @@
     </div>
   <% end %>
 
+  <%= form_for do |form| %>
   <div class="field">
-    <%= form.label :word1 %>
-    <%= form.text_field :word1, id: :bouquet_word1 %>
+    <%= f.label :愛情 %><br>
+    <%= f.select :subject, [["愛情", "愛情"], ["大好き", "大好き"], ["愛している", "愛している"] %>
   </div>
 
   <div class="field">
@@ -29,4 +30,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  <% end %>
 <% end %>
